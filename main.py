@@ -1,4 +1,4 @@
-# v0.0.0
+# v0.0.1
 from threading import Thread
 
 import requests as req
@@ -25,7 +25,11 @@ def takedown(URL):
     for i in range(400):
         with req.session() as ses:
             # put params here
-            data = {"passwd": "shiddyScammer"}
+            data = {
+                "passwd": "shiddyScammer",
+                "fname": fname,
+                "lname": lname
+            }
             takedown = ses.post(runURL, data)
             
             if takedown.status_code == 200:
