@@ -9,8 +9,8 @@ _**Note:**_ Project is still in beta, Don't expext it to have modularity without
 
 Type or copy the following into the terminal to install and run.
 
-```git clone https://awdaw```
-```cd scammer-takedown```
+```git clone https://github.com/tester1901/Scammer-takedown.git```
+```cd Scammer-takedown```
 ```python3 main.py```
 
 # Usage
