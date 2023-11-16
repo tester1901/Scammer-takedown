@@ -1,9 +1,18 @@
-# v0.0.2
+# v0.1.0
 from threading import Thread
 
 import requests as req
 import random
 import json
+import argparse
+
+#process command line arguements
+parser = argparse.ArgumentParser()
+parser.add_argument("-u", "--url", help="URL of the target site")
+args = parser.parse_args()
+
+if args.url:
+    url = args.url
 
 # Check the response code of the server
 def scanner(URL):
@@ -24,9 +33,7 @@ def takedown(URL):
         with req.session() as ses:
             # put params here
             data = {
-                "passwd": "shiddyScammer",
-                "fname": fname,
-                "lname": lname
+                "passwd": "shiddyScammer"
             }
             takedown = ses.post(runURL, data)
             
@@ -47,6 +54,6 @@ def runtime(URL):
     else:
         print("Bad url")
 
-t1 = Thread(target=runtime(startup))
+t1 = Thread(target=runtime(url))
 t1.start()
 t1.join()
