@@ -11,7 +11,6 @@ Type or copy the following into the terminal to install and run.
 
 ```git clone https://github.com/tester1901/Scammer-takedown.git```
 ```cd Scammer-takedown```
-```python3 main.py```
 
 # Usage
 
@@ -30,6 +29,9 @@ data = {
     "name2": "value2"
 }
 ```
+
+Once done, the script is ready to be used, to run;
+```python3 main.py -u target-url```
 
 ## Optional usage
 
