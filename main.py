@@ -1,11 +1,9 @@
-# v0.0.1
+# v0.0.2
 from threading import Thread
 
 import requests as req
 import random
 import json
-
-startup = input("URL: ") 
 
 # Check the response code of the server
 def scanner(URL):
